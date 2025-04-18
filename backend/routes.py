@@ -1,7 +1,7 @@
 from flask import request, jsonify
-from app import app, db
-from models import Fragrance, Note, FragranceType  
 from sqlalchemy import or_
+from app import app, db
+from models import Fragrance, Note, FragranceType
 
 def calculate_similarity(fragrance1, fragrance2):
     notes1 = set(note.id for note in fragrance1.notes)
@@ -13,15 +13,15 @@ def calculate_similarity(fragrance1, fragrance2):
     
     types1 = set(type.id for type in fragrance1.types)
     types2 = set(type.id for type in fragrance2.types)
-    tyoe_intersection = len(types1.intersection(types2))
-    type_similarity = type_intersection / max(len(types_a), len(types_b)) if max(len(types_a), len(types_b)) > 0 else 0
+    type_intersection = len(types1.intersection(types2))
+    type_similarity = type_intersection / max(len(types1), len(types2)) if max(len(types1), len(types2)) > 0 else 0
     
     total_similarity = (note_similarity + type_similarity) / 2
     return total_similarity * 100
 
 @app.route('/')
 def index():
-    return jsonify({'message': Welcome to Fragrance Finder!})'})
+    return jsonify({'message': 'Welcome to Fragrance Finder!'})
 
 @app.route('/api/search', methods=['GET'])
 def search_fragrances():
@@ -35,12 +35,12 @@ def search_fragrances():
             Fragrance.brand.ilike(f'%{query}%'))
         ).limit(10).all()
         
-        return jsonify({
+    return jsonify({
             "results": [
                 {
                     "id": fragrance.id,
                     "name": fragrance.name,
-                    "brand": fragrance.brand
+                    "brand": fragrance.brand,
                     "image_url": fragrance.image_url
                 } for fragrance in fragrances
             ]
@@ -64,7 +64,7 @@ def similar_fragrances(id):
                 "name": f.name,
                 "brand": f.brand,
                 "image_url": f.image_url,
-                "similarity": round(similarity, 1)
+                "similarity": round(similarity, 1),
                 "notes": [n.name for n in f.notes][:5], # Get the first 5 notes
                 "types": [t.name for t in f.types]
             })
@@ -75,7 +75,7 @@ def similar_fragrances(id):
             "name": fragrance.name,
             "brand": fragrance.brand,
             "image_url": fragrance.image_url,
-            "notes": [n.name for n in fragrance.notes]
+            "notes": [n.name for n in fragrance.notes],
             "types": [t.name for t in fragrance.types]
         },
         "similar_fragrances": similar_fragrances [:6] # Get the first 6 similar fragrances

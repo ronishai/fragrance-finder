@@ -1,4 +1,4 @@
-from app import app, db 
+from app import app, db
 from models import Fragrance, Note, FragranceType
 
 def seed_database():
@@ -67,7 +67,7 @@ def seed_database():
             # Fruits
             ("Apple", "Fruity"), ("Pear", "Fruity"), ("Peach", "Fruity"), ("Plum", "Fruity"),
             ("Pineapple", "Fruity"), ("Strawberry", "Fruity"), ("Raspberry", "Fruity"),
-            ("Coconut", "Fruity")
+            ("Coconut", "Fruity"),
             
             # Gourmand
             ("Vanilla", "Gourmand"), ("Caramel", "Gourmand"), ("Cocoa", "Gourmand"),
