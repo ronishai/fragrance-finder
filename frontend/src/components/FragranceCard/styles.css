@@ -1,0 +1,70 @@
+.fragrance-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box shadow 0.2s;
+}
+
+.fragrance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fragrance-image {
+    height: 180px;
+    background-color: #d4a5c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fragrance-details {
+    padding: 1.25rem;
+}
+
+.fragrance-name {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.fragrance-brand {
+    margin: 0 0 0.75rem 0;
+    color: #666;
+}
+
+.fragrance-notes {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.similarity-badge {
+    display: inline-block;
+    background-color: #9c5a8f;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.view-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #9c5a8f;
+    border: 2px solid #9c5a8f;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.view-button:hover {
+    background-color: #9c5a8f;
+    color: white;
+}

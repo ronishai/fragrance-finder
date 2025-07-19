@@ -1,0 +1,73 @@
+.search-page { 
+    min-height: 100vh;
+    background-color: #f8f6f9;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.search-header {
+    margin-bottom: 2rem;
+}
+
+.search-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-query {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #f9f8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffe6e6;
+    border-radius: 8px;
+    color: #d83030;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    color: #666;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}

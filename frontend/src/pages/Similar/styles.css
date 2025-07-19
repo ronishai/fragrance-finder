@@ -1,0 +1,134 @@
+.similar-page {
+    min-height: 100vh;
+    background-color: #f8f6f9;
+}
+
+.similar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: #9c5a8f;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffe6e6;
+    border-radius: 8px;
+    color: #d83030;
+}
+
+.source-fragrance {
+    margin-bottom: 3rem;
+}
+
+.similar-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.fragrance-detail-card {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fragrance-detail-brand {
+    flex: 0 0 300px;
+    padding: 4rem 2rem;
+    background-color: #9c5a8f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.fragrance-detail-content {
+    flex: 1;
+    padding: 2.5rem;
+}
+
+.fragrance-detail-name {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+}
+
+.fragrance-detail-subtitle {
+    margin: 0 0 2rem 0;
+    color: #666;
+    font-weight: normal;
+}
+
+.fragrance-detail-section {
+    margin-bottom: 1.5rem;
+}
+
+.fragrance-detail-section h4 {
+    margin-bottom: 0.5rem;
+    color: #9c5a8f;
+}
+
+.fragrance-notes-list {
+    line-height: 1.6;
+}
+
+.type-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.type-tag {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    background-color: #f0e6f0;
+    color: #9c5a8f;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.similar-fragrances {
+    margin-top: 4rem;
+}
+
+.not-found {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .fragrance-detail-card {
+        flex-direction: column;
+    }
+
+    .fragrance-detail-brand {
+        flex: 0 0 auto;
+        padding: 3rem 1rem;
+    }
+}
+
+

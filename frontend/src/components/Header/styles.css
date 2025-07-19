@@ -1,0 +1,23 @@
+.header {
+    background-color: #9c5a8f;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
