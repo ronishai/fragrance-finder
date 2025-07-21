@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
@@ -8,7 +8,7 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (setQuery.trim().length >= 3) {
+        if (query.trim().length >= 3) {
             navigate(`/search?q=${encodeURIComponent(query.trim())}`);
         }
     };
